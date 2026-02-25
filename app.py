@@ -451,7 +451,7 @@ def main():
 
     st.title(APP_TITLE)
     st.caption(
-        "Tout est simple, visible, modifiable."
+        "« Ce qui ne se mesure pas ne s’améliore pas. » — Peter Drucker"
     )
 
     tab1, tab2, tab3, tab4, tab5 = st.tabs(
