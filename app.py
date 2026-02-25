@@ -449,12 +449,6 @@ def main():
     st.set_page_config(page_title=APP_TITLE, layout="wide")
     init_state()
 
-    st.title(APP_TITLE)
-    st.caption(
-        "On part du **net après IR (cash sur le compte)**, puis on remonte vers **net avant IR** et **brut**. "
-        "Tout est simple, visible, modifiable."
-    )
-
     tab1, tab2, tab3, tab4, tab5 = st.tabs(
         ["1) Mes dépenses", "2) Mes crédits (dont immo)", "3) Hypothèses", "4) Résultats", "5) Export / reprise"]
     )
