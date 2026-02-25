@@ -36,7 +36,7 @@ import altair as alt
 # -----------------------
 # Config
 # -----------------------
-APP_TITLE = "Simulateur de ma vie - Combien pour être bien ?"
+APP_TITLE = "Simulateur de salaire, la richesse sinon rien."
 CURRENCY = "€"
 
 FREQ_OPTIONS = ["mensuel", "hebdo", "trimestriel", "annuel", "ponctuel"]
@@ -368,11 +368,11 @@ def default_expenses() -> pd.DataFrame:
         {"nom": "Assurance habitation", "categorie": "Assurances", "montant": 20.0, "frequence": "mensuel", "date_debut": None, "date_fin": None, "niveau": "Essentiel", "commentaire": "", "actif": True},
 
         {"nom": "Courses", "categorie": "Alimentation", "montant": 450.0, "frequence": "mensuel", "date_debut": None, "date_fin": None, "niveau": "Essentiel", "commentaire": "", "actif": True},
-        {"nom": "Restaurants", "categorie": "Alimentation", "montant": 100.0, "frequence": "mensuel", "date_debut": None, "date_fin": None, "niveau": "Confort", "commentaire": "", "actif": True},
-        {"nom": "Transport (Navigo)", "categorie": "Transport", "montant": 91, "frequence": "mensuel", "date_debut": None, "date_fin": None, "niveau": "Essentiel", "commentaire": "", "actif": True},
+        {"nom": "Restaurants", "categorie": "Alimentation", "montant": 150.0, "frequence": "mensuel", "date_debut": None, "date_fin": None, "niveau": "Confort", "commentaire": "", "actif": True},
+        {"nom": "Transport (Navigo)", "categorie": "Transport", "montant": 90, "frequence": "mensuel", "date_debut": None, "date_fin": None, "niveau": "Essentiel", "commentaire": "", "actif": True},
 
         {"nom": "Sport", "categorie": "Abonnements", "montant": 45.0, "frequence": "mensuel", "date_debut": None, "date_fin": None, "niveau": "Confort", "commentaire": "", "actif": True},
-        {"nom": "Vacances (mensualisées)", "categorie": "Loisirs", "montant": 1800.0, "frequence": "annuel", "date_debut": None, "date_fin": None, "niveau": "Confort", "commentaire": "", "actif": True},
+        {"nom": "Vacances (mensualisées)", "categorie": "Loisirs", "montant": 2000.0, "frequence": "annuel", "date_debut": None, "date_fin": None, "niveau": "Confort", "commentaire": "", "actif": True},
     ]
     return ensure_expense_schema(pd.DataFrame(data))
 
@@ -448,6 +448,11 @@ def init_state():
 def main():
     st.set_page_config(page_title=APP_TITLE, layout="wide")
     init_state()
+
+    st.title(APP_TITLE)
+    st.caption(
+        "Tout est simple, visible, modifiable."
+    )
 
     tab1, tab2, tab3, tab4, tab5 = st.tabs(
         ["1) Mes dépenses", "2) Mes crédits (dont immo)", "3) Hypothèses", "4) Résultats", "5) Export / reprise"]
